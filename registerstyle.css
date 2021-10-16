@@ -1,4 +1,15 @@
-
+html, body {
+	max-height: 100%;
+}
+body{
+    background-color: rgba(230, 230, 230, 0.5);
+}
+.titulocadastro{
+background-color: rgba(182, 182, 182, 0.5);
+padding: 10px;
+margin-bottom: 15px;
+color: rgb(54, 54, 54) ;
+}
 .areaLogo > img{
     max-width: 250px;
 }
@@ -9,5 +20,52 @@
     align-items: center;
     justify-content: center;
 }
+.tudo{
+    position: relative;
+}
+.rodape {
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    bottom: 0;
+    font-size: small;
+   text-align: center;
+  }
+.campoTermos{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btnSend{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+@media screen and (min-height: 1366px) {
 
-
+    .rodape {
+        width: 100%;
+        background-color: black;
+        color: aliceblue;
+        bottom: 0;
+        position: absolute;
+   
+  }
+  .btnSend{
+      margin-top: 50px;
+  }
+  button{
+    width: 60%;
+  }
+  .titulocadastro > h1{
+      font-size: 4.0em;
+  }
+}
+@media screen and (max-width:570px) {
+    
+    .rodape{
+        font-size: 0.5em;
+    }
+}
