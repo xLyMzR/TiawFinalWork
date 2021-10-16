@@ -2,13 +2,17 @@ html, body {
 	max-height: 100%;
 }
 body{
-    background-color: rgba(230, 230, 230, 0.5);
+   background-image: url(img/wallpaperbuild.jpg);
+}
+section{
+    font-size: 1.5em;
+    color: black;
 }
 .titulocadastro{
-background-color: rgba(182, 182, 182, 0.5);
+
 padding: 10px;
 margin-bottom: 15px;
-color: rgb(54, 54, 54) ;
+color: rgb(20, 20, 20) ;
 }
 .areaLogo > img{
     max-width: 250px;
@@ -63,9 +67,16 @@ color: rgb(54, 54, 54) ;
       font-size: 4.0em;
   }
 }
-@media screen and (max-width:570px) {
+@media screen and (max-width:813px) {
     
     .rodape{
         font-size: 0.5em;
+    }
+    .titulocadastro > h1{
+        font-size: 2.0em;
+    }
+    section{
+        font-size: 1.0em;
+        color: black;
     }
 }
