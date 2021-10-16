@@ -1,1 +1,13 @@
 
+.areaLogo > img{
+    max-width: 250px;
+}
+.areaLogo{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+
