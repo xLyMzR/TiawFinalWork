@@ -132,3 +132,14 @@ color: rgb(20, 20, 20) ;
   
     
 }
+@media screen and (width: 1024px) and (height: 1366px) {
+    .formulario{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 0.7em;
+    }
+}
