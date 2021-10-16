@@ -142,4 +142,7 @@ color: rgb(20, 20, 20) ;
         padding: 10px;
         font-size: 0.7em;
     }
+    .titulocadastro > h1{
+        font-size: 2.0em !important;
+    }
 }
