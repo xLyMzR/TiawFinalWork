@@ -20,7 +20,7 @@
     <div class="tudo">
       <header>
         <div class="areaLogo">
-          <img alt="logo" src="img/logoteste.png" />
+      <img alt="logo" src="img/logoteste.png" />
         </div>
       </header>
       <main>
@@ -59,14 +59,15 @@
             <!--CAMPO SENHA-->
             <div class="campodoform camposenha">
             <label class="form-label" for="senha">Senha</label>
-            <span></span>
+            <span id="caractersSenha"></span>
             <input type="password" id="senhaCadastro" name="senhaCadastroData" class="form-control" autocomplete="none"/>
             </div>
             <!--CAMPO SENHA repeat-->
             <div class="campodoform">
             <label class="form-label" for="senhaRepeat">Repita sua senha</label>
             <input type="password" id="senhaRepeat" name="senhaRepeatData" class="form-control" autocomplete="none" />
-            </div>
+            <span id="senhasIguais"></span>
+          </div>
             <div class="campoTermos">
               <input class="form-check-input me-2" type="checkbox" value="" id="concordaComTermos" name="concordaComTermos"/>
               <label class="form-check-label" for="concordaComTermos">

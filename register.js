@@ -69,19 +69,54 @@ nome.oninput = () => {
   
 //TRATAMENTO CAMPO SENHA
 senhaCadastro.onchange = ()=>{
-  if(senhaRepeat.value.length <8){
-    alert('Senha deve conter no minimo 8 caracteres');
+  if(senhaCadastro.value.length <8){
+   
+    let spanSenha = document.getElementById('caractersSenha')
+    spanSenha.innerHTML = '* Senha deve conter no mínimo 8 caracteres';
+    spanSenha.style.color = 'red';
+    spanSenha.style.display = 'block';
   }
+  else{
+    let spanSenha = document.getElementById('caractersSenha');
+    spanSenha.innerHTML = '';
+  }
+
+
+  if(senhaRepeat.value == senhaCadastro.value){
+      
+    let spanSenhaRepeat = document.getElementById('senhasIguais');
+    spanSenhaRepeat.innerHTML = '';
+  }
+
+  else{
+   
+    
+    let spanSenhaRepeat = document.getElementById('senhasIguais');
+    spanSenhaRepeat.innerHTML = '* As senhas devem ser iguais';
+    spanSenhaRepeat.style.color = 'red';
+    spanSenhaRepeat.style.display = 'block';
+
+    
+  }
+
 }
 
   senhaRepeat.onchange = () =>{
 
     if(senhaRepeat.value == senhaCadastro.value){
-      return true;
+      
+      let spanSenhaRepeat = document.getElementById('senhasIguais');
+      spanSenhaRepeat.innerHTML = '';
     }
 
     else{
-      alert("As senhas devem ser iguais!!");
+     
+      
+      let spanSenhaRepeat = document.getElementById('senhasIguais');
+      spanSenhaRepeat.innerHTML = '* As senhas devem ser iguais';
+      spanSenhaRepeat.style.color = 'red';
+      spanSenhaRepeat.style.display = 'block';
+  
       
     }
 
@@ -109,7 +144,7 @@ senhaCadastro.onchange = ()=>{
 
     else{
 
-      alert("As senhas devem ser iguais!");
+      alert("As senhas devem ser iguais e com 8 ou mais digitos!");
       
       return false;      
      
