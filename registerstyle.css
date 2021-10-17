@@ -1,6 +1,9 @@
 html, body {
 	max-height: 100%;
 }
+input::placeholder{
+    font-size: smaller;
+}
 body{
    background-image: url(img/wallpaperbuild.jpg);
 }

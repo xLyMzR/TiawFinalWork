@@ -29,12 +29,12 @@
             <h1 class="text-center">Cadastre-se</h1>
           </div>
           <div class="formulario ">
-          <form method="post" action="#">
+          <form method="post" action="#" id="cadastroFormulario">
             <!--CAMPO NOME-->
 
             <div class="campodoform">
             <label class="form-label" for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nomeData" class="form-control" />
+            <input type="text" id="nome" name="nomeData" class="form-control" autocomplete="none"/>
           </div>
             <!--CAMPO EMAIL-->
             <div class="campodoform">
@@ -44,42 +44,38 @@
             <!--CAMPO CPF-->
           <div class="campodoform">
             <label class="form-label" for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpfData" class="form-control" />
+            <input maxlength="11" type="text" id="cpf" name="cpfData" class="form-control" />
             </div>
             <!--CAMPO CEP-->
             <div class="campodoform">
             <label class="form-label" for="cep">CEP</label>
-            <input type="text" id="cep" name="cepData" class="form-control" />
+            <input type="text" maxlength="8" id="cep" name="cepData" class="form-control" />
           </div>
             <!--CAMPO PHONE-->
             <div class="campodoform">
             <label class="form-label" for="celular">Celular</label>
-            <input type="text" id="celular" class="form-control" />
+            <input type="text" maxlength="12" id="celular" name="celular" class="form-control" placeholder="DDD+número"/>
             </div>
             <!--CAMPO SENHA-->
-            <div class="campodoform">
+            <div class="campodoform camposenha">
             <label class="form-label" for="senha">Senha</label>
-            <input type="password" id="senhaCadastro" name="senhaCadastroData" class="form-control" />
+            <span></span>
+            <input type="password" id="senhaCadastro" name="senhaCadastroData" class="form-control" autocomplete="none"/>
             </div>
             <!--CAMPO SENHA repeat-->
             <div class="campodoform">
             <label class="form-label" for="senhaRepeat">Repita sua senha</label>
-            <input type="password" id="senhaRepeat" name="senhaRepeatData" class="form-control" />
+            <input type="password" id="senhaRepeat" name="senhaRepeatData" class="form-control" autocomplete="none" />
             </div>
             <div class="campoTermos">
-              <input
-                class="form-check-input me-2"
-                type="checkbox"
-                value=""
-                id="concordaComTermos"
-              />
+              <input class="form-check-input me-2" type="checkbox" value="" id="concordaComTermos" name="concordaComTermos"/>
               <label class="form-check-label" for="concordaComTermos">
                 Concordo com todos os termos
                 <a href="#!">Termos de serviço</a>
               </label>
             </div>
             <div class="btnSend">
-              <button type="submit" class="btn btn-primary btn-lg">
+              <button id="btn" type="submit" class="btn btn-primary btn-lg">
                 Registrar
               </button>
             </div>
