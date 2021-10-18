@@ -2,7 +2,7 @@ onload = () =>{
 
 document.getElementById('btn').disabled = true;
 
-//bloqueando a opçao de colar nos inputs para evitar falha nas verificaçoes!!!
+//bloqueando a opçao de "PASTE" nos inputs para evitar falha nas verificaçoes!!!
 var description = document.querySelectorAll(".form-control");
 description.forEach((inputs) =>{
 
@@ -141,7 +141,7 @@ senhaCadastro.onchange = ()=>{
     spanSenha.innerHTML = '';
   }
 
-
+//verificação de semelhança de senhas
   if(senhaRepeat.value == senhaCadastro.value){
       
     let spanSenhaRepeat = document.getElementById('senhasIguais');
