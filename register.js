@@ -17,6 +17,7 @@ description.forEach((inputs) =>{
 
 //VERIFICAÇÃO EM TEMPO REAL
 
+//tratamento campo NOME
 nome.oninput = () => {
 //qualquer minima alteração no campo textual ele já responde (oninput)
 
