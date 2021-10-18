@@ -137,20 +137,23 @@ senhaCadastro.onchange = ()=>{
 
  //verificação de envio 
   cadastroFormulario.onsubmit = () =>{
-  
-    if(senhaRepeat.value == senhaCadastro.value && senhaRepeat.value.length >=8 ){
-      return true;
+
+    if(senhaCadastro.value.length< 8 || cpf.value.length <11 || cep.value.length< 8){
+      alert('Verifique os campos do formulário ');
+      return false;
+    }
+    
+    if(nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
+      alert('Verifique os campos do formulário');
+
+      return false;
+
     }
 
-    else{
 
-      alert("As senhas devem ser iguais e com 8 ou mais digitos!");
-      
-      return false;      
-     
-    }
 
   }
+
 
 }
 
