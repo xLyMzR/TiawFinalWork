@@ -16,6 +16,9 @@ form{
     background-color: rgba(187, 187, 187, 0.089);
     margin-bottom: 25px;
 }
+span{
+    font-size: 0.7em;
+}
 .formulario{
     display: flex;
     flex-direction: column;
@@ -92,6 +95,9 @@ color: rgb(20, 20, 20) ;
         font-size: 1.0em;
         color: black;
     }
+    span{
+        font-size: 0.7em;
+    }
 }
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
     .campodoform{
@@ -115,6 +121,9 @@ color: rgb(20, 20, 20) ;
         width: 50%;
         font-size: 0.9em !important;
     }
+    span{
+        font-size: 1.2em;
+    }
 }
 @media screen and (min-width: 1366px) {
 
@@ -133,7 +142,9 @@ color: rgb(20, 20, 20) ;
             font-size: 1.2em;
         }
   
-    
+    span{
+        font-size: 0.6em;
+    }
 }
 @media screen and (width: 1024px) and (height: 1366px) {
     .formulario{

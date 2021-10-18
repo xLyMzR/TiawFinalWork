@@ -73,7 +73,7 @@ senhaCadastro.onchange = ()=>{
    
     let spanSenha = document.getElementById('caractersSenha')
     spanSenha.innerHTML = '* Senha deve conter no mínimo 8 caracteres';
-    spanSenha.style.color = 'red';
+    spanSenha.style.color = 'orange';
     spanSenha.style.display = 'block';
   }
   else{
@@ -93,7 +93,7 @@ senhaCadastro.onchange = ()=>{
     
     let spanSenhaRepeat = document.getElementById('senhasIguais');
     spanSenhaRepeat.innerHTML = '* As senhas devem ser iguais';
-    spanSenhaRepeat.style.color = 'red';
+    spanSenhaRepeat.style.color = 'orange';
     spanSenhaRepeat.style.display = 'block';
 
     
@@ -114,7 +114,7 @@ senhaCadastro.onchange = ()=>{
       
       let spanSenhaRepeat = document.getElementById('senhasIguais');
       spanSenhaRepeat.innerHTML = '* As senhas devem ser iguais';
-      spanSenhaRepeat.style.color = 'red';
+      spanSenhaRepeat.style.color = 'orange';
       spanSenhaRepeat.style.display = 'block';
   
       
