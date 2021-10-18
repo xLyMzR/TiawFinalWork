@@ -1,5 +1,6 @@
 onload = () =>{
 
+//desabilitando o botão de envio do formulário
 document.getElementById('btn').disabled = true;
 
 //bloqueando a opçao de "PASTE" nos inputs para evitar falha nas verificaçoes!!!
