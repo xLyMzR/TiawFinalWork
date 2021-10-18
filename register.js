@@ -2,6 +2,20 @@ onload = () =>{
 
 document.getElementById('btn').disabled = true;
   
+//bloqueando a opçao de colar nos inputs para evitar falha nas verificaçoes!!!
+var description = document.querySelectorAll(".form-control");
+
+description.forEach((inputs) =>{
+
+  inputs.addEventListener("paste", function(e) {
+    
+    e.preventDefault();
+      
+  });
+
+});
+
+
 //VERIFICAÇÃO EM TEMPO REAL
 
 nome.oninput = () => {
@@ -149,8 +163,6 @@ senhaCadastro.onchange = ()=>{
       return false;
 
     }
-
-
 
   }
 
