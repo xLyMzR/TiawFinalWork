@@ -40,26 +40,28 @@
             <span id="campoVazio"></span>
             <div class="campodoform">
             <label class="form-label" for="emailCadastro">E-mail</label>
-            <input type="email" id="emailCadastro" name="emailCadastroData" class="form-control" />
+            <input type="email" id="emailCadastro" name="emailCadastroData" class="form-control" autocomplete="off"/>
           </div>
             <!--CAMPO CPF-->
-            <span id="campoVazio"></span>
           <div class="campodoform">
             <label class="form-label" for="cpf">CPF</label>
-            <input maxlength="11" type="text" id="cpf" name="cpfData" class="form-control" />
-            </div>
+            <input maxlength="11" type="number" id="cpf" name="cpfData" class="form-control" autocomplete="none" />
+            <span id="campoCPF"></span>  
+          </div>
             <!--CAMPO CEP-->
-            <span id="campoVazio"></span>
+          
             <div class="campodoform">
             <label class="form-label" for="cep">CEP</label>
-            <input type="text" maxlength="8" id="cep" name="cepData" class="form-control" />
+            <input type="number" maxlength="8" id="cep" name="cepData" class="form-control" autocomplete="none" />
+            <span id="campoCep"></span> 
           </div>
             <!--CAMPO PHONE-->
-            <span id="campoVazio"></span>
+         
             <div class="campodoform">
             <label class="form-label" for="celular">Celular</label>
-            <input type="text" autocomplete="none" maxlength="12" id="celular" name="celular" class="form-control" placeholder="DDD+número"/>
-            </div>
+            <input type="number" maxlength="12" id="celular" name="celular" class="form-control" placeholder="DDD+número" autocomplete="none"/>
+            <span id="campoCell"></span> 
+          </div>
             <!--CAMPO SENHA-->
             <span id="campoVazio"></span>
             <div class="campodoform camposenha">

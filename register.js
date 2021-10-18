@@ -1,10 +1,9 @@
 onload = () =>{
 
 document.getElementById('btn').disabled = true;
-  
+
 //bloqueando a opçao de colar nos inputs para evitar falha nas verificaçoes!!!
 var description = document.querySelectorAll(".form-control");
-
 description.forEach((inputs) =>{
 
   inputs.addEventListener("paste", function(e) {
@@ -50,8 +49,26 @@ nome.oninput = () => {
       cpf.value = cpf.value.substr(0, cpf.value.length - 1);
     }
     
+ 
 
 
+  }
+  cpf.onchange = () =>{
+    
+    let campo = document.getElementById('campoCPF');
+
+    if(cpf.value.length < 11 || cpf.value.length > 11){
+
+
+     campo.innerHTML ='* CPF invalido!';
+      campo.style.color='orange';
+      
+      cpf.focus();
+    }
+
+    else{
+       campo.innerHTML ='';
+    }
   }
 //tratamento campo CEP
   cep.oninput = () =>{
@@ -64,6 +81,22 @@ nome.oninput = () => {
     }
     
 
+
+  }
+  cep.onchange = () =>{
+    let spanCep = document.getElementById('campoCep'); 
+
+    if(cep.value.length < 8 || cep.value.length>8){
+   
+      console.log('cep menor que 8');
+      spanCep.innerHTML = "*cep invalido";
+      spanCep.style.color='orange';
+      cep.focus();
+    }
+    else{
+      
+      spanCep.innerHTML = '';
+    }
 
   }
 //tratamento campo CELL
@@ -79,7 +112,20 @@ nome.oninput = () => {
 
 
   }
+  celular.onchange = () =>{
+    let spanCell = document.getElementById('campoCell'); 
 
+    if(celular.value.length < 12 || celular.value.length>12){
+  
+      spanCell.innerHTML = "*celular invalido";
+      spanCell.style.color='orange';
+      cep.focus();
+    }
+    else{
+      
+      spanCell.innerHTML = '';
+    }
+  }
   
 //TRATAMENTO CAMPO SENHA
 senhaCadastro.onchange = ()=>{
@@ -152,22 +198,22 @@ senhaCadastro.onchange = ()=>{
  //verificação de envio 
   cadastroFormulario.onsubmit = () =>{
 
-    if(senhaCadastro.value.length< 8 || cpf.value.length <11 || cep.value.length< 8){
+    if(senhaCadastro.value.length< 8 || cpf.value.length <11 || cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
       alert('Verifique os campos do formulário ');
       return false;
     }
     
-    if(nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
+  if(cpf.value.length >11 || cep.value.length >8 || celular.value.length >12){
       alert('Verifique os campos do formulário');
 
-      return false;
+     return false;
 
-    }
+   }
 
   }
 
-
 }
+
 
 
 
