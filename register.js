@@ -217,11 +217,11 @@ senhaCadastro.onchange = ()=>{
     "senha": document.getElementById('senhaCadastro').value
   }
   ]
-  
 
+//fim do onsubmit
   }
 
-
+//fim do onload
 }
 
 
