@@ -200,12 +200,12 @@ senhaCadastro.onchange = ()=>{
  //verificação de envio 
   cadastroFormulario.onsubmit = () =>{
 
-    if(senhaCadastro.value.length< 8 || cpf.value.length <11 || cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
+    if(cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
       alert('Verifique os campos do formulário ');
       return false;
     }
     
-  if(cpf.value.length >11 || cep.value.length >8 || celular.value.length >12){
+  if(senhaCadastro.value.length< 8 || cpf.value.length <11 || cpf.value.length >11 || cep.value.length >8 || celular.value.length >12){
       alert('Verifique os campos do formulário');
 
      return false;

@@ -28,7 +28,7 @@ span{
 font-size: 1.0em;
 padding: 10px;
 margin-bottom: 15px;
-color: rgb(20, 20, 20) ;
+color:  #fab326d3;
 }
 .areaLogo > img{
     max-width: 250px;
@@ -166,7 +166,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
-
 input[type=number] {
     -moz-appearance:textfield;
 }
