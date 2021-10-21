@@ -89,8 +89,6 @@ nome.oninput = () => {
     let spanCep = document.getElementById('campoCep'); 
 
     if(cep.value.length < 8 || cep.value.length>8){
-   
-      console.log('cep menor que 8');
       spanCep.innerHTML = "*cep invalido";
       spanCep.style.color='orange';
       cep.focus();
@@ -187,7 +185,6 @@ senhaCadastro.onchange = ()=>{
 
   //CHECKBOX para controles de envio
   concordaComTermos.onchange = ()=>{
-  console.log(concordaComTermos.checked);
 
     if(concordaComTermos.checked == true){
       document.getElementById('btn').disabled = false;
@@ -200,7 +197,8 @@ senhaCadastro.onchange = ()=>{
  //verificação de envio 
   cadastroFormulario.onsubmit = () =>{
 
-    if(cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
+  
+   if(cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
       alert('Verifique os campos do formulário ');
       return false;
     }
@@ -209,12 +207,23 @@ senhaCadastro.onchange = ()=>{
       alert('Verifique os campos do formulário');
 
      return false;
-
    }
+
+//criando o objeto cadastroUsuario para usar na página de login
+
+   let cadastroDoUsuario = [{
+
+    "emailLogin": document.getElementById('emailCadastro').value,
+    "senha": document.getElementById('senhaCadastro').value
+  }
+  ]
+  
 
   }
 
+
 }
+
 
 
 
