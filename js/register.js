@@ -218,6 +218,9 @@ senhaCadastro.onchange = ()=>{
   }
   ]
 
+  localStorage.setItem('emailLogin', emailCadastro.value);
+  localStorage.setItem('senha', senhaCadastro.value);
+
 //fim do onsubmit
   }
 
