@@ -195,7 +195,7 @@ senhaCadastro.onchange = ()=>{
   }
 
  //verificação de envio 
-  cadastroFormulario.onsubmit = () =>{
+  cadastroFormulario.onsubmit = (formulario) =>{
 
   
    if(cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
@@ -220,6 +220,9 @@ senhaCadastro.onchange = ()=>{
 
   localStorage.setItem('emailLogin', emailCadastro.value);
   localStorage.setItem('senha', senhaCadastro.value);
+
+  
+return window.location.href = 'login.html'; 
 
 //fim do onsubmit
   }
