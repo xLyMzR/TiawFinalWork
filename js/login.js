@@ -29,7 +29,7 @@ let campovazio = document.getElementById('campovazio');
             
         }
     if(email.value !== localStorage.getItem('emailLogin') && senha.value !== localStorage.getItem('senha')){
-        
+        alert("usuario ou senha invalidos");
         return false;
     }
     else{
