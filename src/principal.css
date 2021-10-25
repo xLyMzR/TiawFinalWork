@@ -1,3 +1,105 @@
-.arealogo{
+:root{
+    --color1: #201F1F;
+}
+.navbar-dark{
+    background: orange;
+}
+
+body{
+    background-color: var(--color1);
+    margin:0;
+}
+img{
+    width: 100px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: black;
+}
+nav{
+    margin-bottom: 10px;
+}
+
+.navbar-toggler{
+    color: black;
+}
+
+nav  .navbar-toggler{
+    color: black;
+}
+
+.navbar-dark .navbar-toggler{
+    color: black;
+}
+
+.nav-item{
+    margin-right: 10px;
+    width: max-content;
+
+}
+ul .nav-item a{
+    text-decoration: none;
+    color:  black;
+}
+
+.navbar-nav{
+    gap: 60px;
+}
+svg{
+    width: 50px;
+    height: 50px;
+}
+
+.cards  {
+    display: flex;
+    flex-direction: column;
+}
+
+.topo{
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nome-servico{
+    color: orange;
+}
+.nome-oferecedor a{
+    text-decoration: underline;
+    color: white;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #111010;
+    margin: 0 auto;
+    width: 75%;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: antiquewhite;
+}
+
+.botao{
+    display: flex;
+    justify-content: flex-end;
+}
+.contratar{
+    background-color: orange;
+    padding: 5px 10px;
+    color: whitesmoke;
+    border: 1px solid orange;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: white;
+justify-content: center;
 }

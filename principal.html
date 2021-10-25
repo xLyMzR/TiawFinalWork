@@ -2,12 +2,14 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="página de login" author="Leonardo Mamede" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="src/principal.css" />
-
-    <title>Principal</title>
+    <title>Home - ConstructiON</title>
 </head>
 
 <body>
@@ -16,43 +18,152 @@
             <img alt="logo" src="img/logoReajuste.png" />
         </div>
     </header>
-    <nav>
-        
-    </nav>
     <main>
-        
-        <section>
-            <article>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
 
-                <h2>Anuncio de Serviço</h2>
-                <p>descrição do Serviço</p>
-                <p>Perfil do contratado</p>
-                <button type="submit">Contratar</button>
+                            <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                    <path
+                                        d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-mailbox2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9 8.5h2.793l.853.854A.5.5 0 0 0 13 9.5h1a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H9v1z" />
+                                    <path
+                                        d="M12 3H4a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a4 4 0 0 0-4-4zM8 7a3.99 3.99 0 0 0-1.354-3H12a3 3 0 0 1 3 3v6H8V7zm-3.415.157C4.42 7.087 4.218 7 4 7c-.218 0-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0c0 .334-.164.264-.415.157z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cash-stack" viewBox="0 0 16 16">
+                                    <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                                    <path
+                                        d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <section class="cards">
+            <article class="card">
+                <div class="topo">
+                    <h3 class="nome-servico">Nome Serviço</h3>
+                    <h3 class="nome-oferecedor"><a href="#">Nome Prestador</a></h3>
+                </div>
+                <div class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea expedita quasi vero laborum quia
+                        doloribus nam tenetur, at reiciendis quo officiis! Eum, aliquid corrupti? Rem commodi alias ab
+                        voluptas eaque.</p>
+                </div>
+                <div class="botao">
+                    <button class="contratar">Contratar</button>
+                </div>
+
             </article>
-            <article>
+            <article class="card">
+                <div class="topo">
+                    <h3 class="nome-servico">Nome Serviço</h3>
+                    <h3 class="nome-oferecedor"><a href="#">Nome Prestador</a></h3>
+                </div>
+                <div class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea expedita quasi vero laborum quia
+                        doloribus nam tenetur, at reiciendis quo officiis! Eum, aliquid corrupti? Rem commodi alias ab
+                        voluptas eaque.</p>
+                </div>
+                <div class="botao">
+                    <button class="contratar">Contratar</button>
+                </div>
 
-                <h2>Anuncio de Serviço</h2>
-                <p>descrição do Serviço</p>
-                <p>Perfil do contratado</p>
-                <button type="submit">Contratar</button>
             </article>
-            <article>
+            <article class="card">
+                <div class="topo">
+                    <h3 class="nome-servico">Nome Serviço</h3>
+                    <h3 class="nome-oferecedor"><a href="#">Nome Oferecedor</a></h3>
+                </div>
+                <div class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea expedita quasi vero laborum quia
+                        doloribus nam tenetur, at reiciendis quo officiis! Eum, aliquid corrupti? Rem commodi alias ab
+                        voluptas eaque.</p>
+                </div>
+                <div class="botao">
+                    <button class="contratar">Contratar</button>
+                </div>
 
-                <h2>Anuncio de Serviço</h2>
-                <p>descrição do Serviço</p>
-
-                <p>Perfil do contratado</p>
-
-                <button type="submit">Contratar</button>
             </article>
+            <article class="card">
+                <div class="topo">
+                    <h3 class="nome-servico">Nome Serviço</h3>
+                    <h3 class="nome-oferecedor"><a href="#">Nome Prestador</a></h3>
+                </div>
+                <div class="descricao">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea expedita quasi vero laborum quia
+                        doloribus nam tenetur, at reiciendis quo officiis! Eum, aliquid corrupti? Rem commodi alias ab
+                        voluptas eaque.</p>
+                </div>
+                <div class="botao">
+                    <button class="contratar">Contratar</button>
+                </div>
 
+            </article>
         </section>
-
     </main>
 
-    <footer>
 
-    </footer>
+<footer style="background-color: black; height: 100%;">
+    Todos os direitos reservados @ 2021 - ICEI Puc Minas TIAW 
+</footer>
+
+<!---->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
