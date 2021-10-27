@@ -24,6 +24,7 @@ let campovazio = document.getElementById('campovazio');
 
 //VERIFICAÇÃO DO USUARIO CADASTRADO PARA LOGIN
     formularioLogin.onsubmit = ()=>{
+        
         if(email.value == '' || senha.value == ''){
             return false;
             
