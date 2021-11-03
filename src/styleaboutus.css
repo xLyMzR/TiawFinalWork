@@ -8,10 +8,71 @@ html{
 header{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+   align-items: center;
+   padding: 10px;
+}
+body{
+    background-color: #201F1F !important;
+}
+img{
+    width: 130px;
+}
+
+.btn.btn-primary{
+    background: orange;
+    border: none;
+}
+button{
+    color: whitesmoke;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: white;
     justify-content: center;
     background-color: black;
 }
-body{
-    background-color: aquamarine;
+.btn{
+margin: 5px;
+}
+.cardsArea{
+    margin-top: 10px;
+    padding: 10px;
+}
+.servicesArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+#serviceAreaTitle{
+    color: white;
+    text-align: center;
+}
+.serviceCard{
+    margin: 10px;
+}
+@media screen and (max-width:375px) {
+    header{
+        justify-content: center;
+    }
 }
 
+@media  screen and (min-width: 1200px) {
+   button{
+       font-size: 1.5em!important;
+       
+   }
+ 
+
+}
+@media screen and (min-width:1000px){
+    .servicesArea{
+        flex-wrap: nowrap;
+    }
+}
