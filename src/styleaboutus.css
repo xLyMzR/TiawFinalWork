@@ -3,6 +3,7 @@ html{
     height: 100%;
     width: 100%;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
 }
 header{
@@ -26,7 +27,7 @@ img{
     border: none;
 }
 button{
-    color: whitesmoke;
+    color: white;
 }
 footer{
     display: flex;
@@ -47,32 +48,69 @@ margin: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+   justify-content: center;
 
 }
 #serviceAreaTitle{
+    display: block;
     color: white;
     text-align: center;
 }
 .serviceCard{
     margin: 10px;
+    width: 100%;
+}
+.card-text{
+    color: rgb(253, 247, 247);
+}
+.teamArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#teamDesc{
+    color: orange;
+
+}
+.btnArea{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 @media screen and (max-width:375px) {
     header{
         justify-content: center;
     }
 }
+@media screen and (min-width:414px ) and (max-width:640px) {
+    .teamArea{
+        flex-wrap: nowrap;
+        }
 
+}
 @media  screen and (min-width: 1200px) {
    button{
        font-size: 1.5em!important;
        
    }
- 
-
+   .servicesArea{
+    flex-wrap: nowrap;
 }
-@media screen and (min-width:1000px){
+.teamArea{
+    justify-content: center;
+}
+}
+@media screen and (min-width:1000px) and (max-width:1200px){
     .servicesArea{
         flex-wrap: nowrap;
+    }
+    .teamArea{
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .teamArea img{
+
+        width: 150px!important;
     }
 }

@@ -19,6 +19,10 @@ padding: 10px;
 margin-bottom: 15px;
 color: rgb(20, 20, 20) ;
 }
+.titulologin a{
+    text-decoration: none;
+    color: orange;
+}
 .areaLogo > img{
     max-width: 100px;
 }
