@@ -1,7 +1,7 @@
 onload = () =>{
 
 //desabilitando o botão de envio do formulário
-document.getElementById('btn').disabled = true;
+//document.getElementById('btn').disabled = true;
 
 //bloqueando a opçao de "PASTE" nos inputs para evitar falha nas verificaçoes!!!
 var description = document.querySelectorAll(".form-control");
@@ -195,7 +195,7 @@ senhaCadastro.onchange = ()=>{
   }
 
  //verificação de envio 
-  cadastroFormulario.onsubmit = (formulario) =>{
+  butCad.onclick = () =>{
 
   
    if(cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
@@ -218,11 +218,13 @@ senhaCadastro.onchange = ()=>{
   }
   ]
 
+  localStorage.setItem(emailCadastro.value, JSON.stringify(cadastroDoUsuario));
   localStorage.setItem('emailLogin', emailCadastro.value);
   localStorage.setItem('senha', senhaCadastro.value);
 
+alert("Passei");
   
-return window.location.href = 'login.html'; 
+window.location.href = "./login.html"; 
 
 //fim do onsubmit
   }
