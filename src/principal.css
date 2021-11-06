@@ -28,8 +28,9 @@ header{
     font-size: x-small;
     font-style: italic;
 }
-#welcomeUserName{
-    text-decoration: underline;
+#welcomeMsg{
+    display: inline;
+    color: rgb(201, 201, 201);
 }
 nav{
     margin-bottom: 10px;

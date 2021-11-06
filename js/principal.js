@@ -1,11 +1,10 @@
-document.onload = () =>{
+onload = () =>{
 
 
-    let userName = document.getElementById('welcomeMsg');
-    let nomedousuario = localStorage.getItem('nomeUsuario');
 
-    userName.innerHTML = '<p> TESTES</p>';
-
+    document.getElementById('welcomeMsg').innerHTML = localStorage.getItem('nomeUsuario');
+    document.getElementById('welcomeMsg').style.textDecoration = 'underline';
+    
 
 
 
