@@ -8,6 +8,7 @@
 body{
     background-color: var(--color1);
     margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 img{
     width: 100px;
@@ -16,8 +17,19 @@ img{
 header{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     background-color: black;
+    padding: 20px;
+}
+#welcomeUserHeader{
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: x-small;
+    font-style: italic;
+}
+#welcomeUserName{
+    text-decoration: underline;
 }
 nav{
     margin-bottom: 10px;

@@ -1,7 +1,7 @@
 onload = () =>{
 
 //desabilitando o botão de envio do formulário
-//document.getElementById('btn').disabled = true;
+document.getElementById('butCad').disabled = true;
 
 //bloqueando a opçao de "PASTE" nos inputs para evitar falha nas verificaçoes!!!
 var description = document.querySelectorAll(".form-control");
@@ -187,10 +187,10 @@ senhaCadastro.onchange = ()=>{
   concordaComTermos.onchange = ()=>{
 
     if(concordaComTermos.checked == true){
-      document.getElementById('btn').disabled = false;
+      document.getElementById('butCad').disabled = false;
     }
     else{
-      document.getElementById('btn').disabled = true;
+      document.getElementById('butCad').disabled = true;
     }
   }
 
@@ -212,17 +212,24 @@ senhaCadastro.onchange = ()=>{
 //criando o objeto cadastroUsuario para usar na página de login
 
    let cadastroDoUsuario = [{
-
+    "nomeUsuario": document.getElementById('nome').value,
     "emailLogin": document.getElementById('emailCadastro').value,
-    "senha": document.getElementById('senhaCadastro').value
+    "senha": document.getElementById('senhaCadastro').value,
+    "cpfUsuario": document.getElementById('cpf').value,
+    "cepUsuario": document.getElementById('cep').value,
+    "telefoneUsuario": document.getElementById('celular').value
   }
   ]
 
   localStorage.setItem(emailCadastro.value, JSON.stringify(cadastroDoUsuario));
   localStorage.setItem('emailLogin', emailCadastro.value);
   localStorage.setItem('senha', senhaCadastro.value);
-
-alert("Passei");
+  localStorage.setItem('nomeUsuario', nome.value);
+  localStorage.setItem('cpfUsuario', cpf.value);
+  localStorage.setItem('cepUsuario', cep.value);
+  localStorage.setItem('telefoneUsuario', celular.value);
+  
+alert("CADASTRO REALIZADO COM SUCESSO");
   
 window.location.href = "./login.html"; 
 
