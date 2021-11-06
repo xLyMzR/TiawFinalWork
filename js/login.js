@@ -23,7 +23,7 @@ let campovazio = document.getElementById('campovazio');
 }
 
 //VERIFICAÇÃO DO USUARIO CADASTRADO PARA LOGIN
-    formularioLogin.onsubmit = ()=>{
+ butLog.onclick = ()=>{
         
         if(email.value == '' || senha.value == ''){
             return false;
@@ -33,10 +33,10 @@ let campovazio = document.getElementById('campovazio');
         alert("usuario ou senha invalidos");
         return false;
     }
-    else{
-       return true;
-    }
-  
+       
+        window.location.href='./principal.html';
+    
 }
+
 
 }

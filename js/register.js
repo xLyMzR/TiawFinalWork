@@ -226,7 +226,7 @@ alert("Passei");
   
 window.location.href = "./login.html"; 
 
-//fim do onsubmit
+//fim do onclick
   }
 
 //fim do onload
