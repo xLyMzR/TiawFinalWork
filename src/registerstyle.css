@@ -51,6 +51,7 @@ color:  #fab326d3;
     bottom: 0;
     font-size: small;
    text-align: center;
+   padding: 5px;
   }
 .campoTermos{
     display: block;
