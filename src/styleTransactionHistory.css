@@ -1,0 +1,142 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  #201F1F!important;
+}
+.navbar-dark{
+    background: orange;
+}
+
+img{
+    width: 100px;
+}
+#rodape{
+    color: white;
+    font-size: 0.8em;
+   padding: 20px;
+   background-color: black;
+}
+.areaLogo{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 10px;
+    justify-content: center;
+}
+#pageTitle{
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 2.0em;
+    margin-top: 50px;
+    background-color: rgba(255, 166, 0, 0.815);
+}
+.btnArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 60px;
+}
+.btnArea button {
+    color: white;
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    font-style: bolder;
+    font-size: 1.0em;
+}
+#infArea{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    
+
+
+}
+main{
+color: white;
+}
+.cardsTransaction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+.cardOne{
+    color: rgb(199, 149, 11);
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: 80px;
+}
+.cardTwoo{
+    color: rgb(199, 149, 11);
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: 80px;
+}
+.cardThree{
+    color: rgb(199, 149, 11);
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: 80px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+nav{
+    margin-bottom: 10px;
+}
+
+.navbar-toggler{
+    color: black;
+}
+
+nav  .navbar-toggler{
+    color: black;
+}
+
+.navbar-dark .navbar-toggler{
+    color: black;
+}
+
+.nav-item{
+    margin-right: 10px;
+    width: max-content;
+
+}
+ul .nav-item a{
+    text-decoration: none;
+    color:  black;
+}
+
+.navbar-nav{
+    gap: 60px;
+}
+svg{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+
+    img{
+        width: 150px;
+    }
+    
+    .pageTitleWidth{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #pageTitle{
+        width: 70%;
+    }
+}
