@@ -140,3 +140,13 @@ svg{
         width: 70%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #msgForEmptyHistory{
+
+        font-size: 0.7em;
+    }
+    #rodape{
+        font-size: 0.6em!important;
+    }
+}
