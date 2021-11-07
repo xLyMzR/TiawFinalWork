@@ -120,3 +120,11 @@ footer{
     color: white;
 justify-content: center;
 }
+
+@media screen and (max-width:500px) {
+
+    footer{
+        font-size: 0.6em;
+    }
+    
+}
