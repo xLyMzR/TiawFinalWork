@@ -81,9 +81,13 @@ svg{
 .nome-servico{
     color: orange;
 }
-.nome-oferecedor a{
-    text-decoration: underline;
+.nome-oferecedor{
+    text-decoration: none;
     color: white;
+}
+.topo a{
+    text-decoration: underline;
+    color: white
 }
 .card{
     display: flex;

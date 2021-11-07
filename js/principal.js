@@ -6,49 +6,74 @@ onload = () =>{
     document.getElementById('welcomeMsg').style.textDecoration = 'underline';
     
 
-    //PREENCHER OS CARDS DE  CATEGORIA DE SERVIÇO
+    //PREENCHER OS CARDS DE CATEGORIA DE SERVIÇO
 
-    var servicesCards = ['Elétrica', 'Arquitetura', 'Encanamento', 'Design']
-   
-    //guardando no localStorage
-    localStorage.setItem('sOne', servicesCards[0]);
-    localStorage.setItem('sTwoo', servicesCards[1]);
-    localStorage.setItem('sThree', servicesCards[2]);
-    localStorage.setItem('sFour', servicesCards[3]);
+  let cardOne = {
+    nameWorker: "Maria do Carmo",
+    nameService: "Elétrica",
+    serviceDesc: 'Eletricista industrial, residencial e predial,mais de 25 anos de atendimento, montagens, instalações e manutenção NR10, eficiencia energética e orçamento sem compromisso.'
+  }
+  
+  let cardTwoo = {
+    nameWorker: "José Henrique Fernandes",
+    nameService: "Encanamento",
+    serviceDesc: 'Encanador: registros, chuveiros, torneiras, válvulas de descarga, caixas aclopadas, desentupimento de pias, ralos, vasos, esgoto residencial. Ligue, trabalho a 25 anos com reparos hidráulicos.'
+  }
 
-    //carregando Nos cards
-    document.getElementById('serviceOne') .innerHTML =  localStorage.getItem('sOne');
-    document.getElementById('serviceTwoo') .innerHTML =  localStorage.getItem('sTwoo');
-    document.getElementById('serviceThree') .innerHTML =  localStorage.getItem('sThree');
-    document.getElementById('serviceFour') .innerHTML =  localStorage.getItem('sFour');
- 
+  let cardThree = {
+    nameWorker: "Martin Braga",
+    nameService: "Arquitetura",
+    serviceDesc: 'Projetos de arquitetura, Arquitetura de interiores, Projetos junto à vigilância sanitária, Reformas residenciais e comerciais, Consultorias, Laudos, Maquetes 3D e Execução de obras.'
+  }
 
-  //PREENCHER OS CARDS DE  Prestadores Relacionados aos cards;
+  let cardFour = {
+    nameWorker: "Raquel Prates",
+    nameService: "Design",
+    serviceDesc: 'Sou Designer de Interiores e faço consultorias, projetos de móveis e marcenaria, projetos de interiores comerciais e residências, e também reformas.'
+  }
+  
 
-  var workersCards = ['Maria do carmo','Martin braga', 'Mateus Souza', 'Raquel prates'];
-   
-    localStorage.setItem('workerOne', workersCards[0]);
-    localStorage.setItem('workerTwoo', workersCards[1]);
-    localStorage.setItem('workerThree', workersCards[2]);
-    localStorage.setItem('workerFour', workersCards[3]);
+  //guardando os nomes do serviço no localstorage
+  localStorage.setItem('nomeCardUm', cardOne.nameService);
+  localStorage.setItem('nomeCardDois', cardTwoo.nameService);
+  localStorage.setItem('nomeCardTres', cardThree.nameService);
+  localStorage.setItem('nomeCardQuatro', cardFour.nameService);
+  //guardando os nomes dos trabalhadores no localstorage
+  localStorage.setItem('servicoCardUm', cardOne.nameWorker);
+  localStorage.setItem('servicoCardDois', cardTwoo.nameWorker);
+  localStorage.setItem('servicoCardTres', cardThree.nameWorker);
+  localStorage.setItem('servicoCardQuatro', cardFour.nameWorker);
+  //GUARDANDO AS DESC do serviço no localstorage
+  localStorage.setItem('descCardUm', cardOne.serviceDesc);
+  localStorage.setItem('descCardDois', cardTwoo.serviceDesc);
+  localStorage.setItem('descCardTres', cardThree.serviceDesc);
+  localStorage.setItem('descCardQuatro', cardFour.serviceDesc);
 
 
-    document.getElementById('workerNameOne').innerHTML =  localStorage.getItem('workerOne');
-    document.getElementById('workerNameTwoo').innerHTML =  localStorage.getItem('workerTwoo');
-    document.getElementById('workerNameThree').innerHTML =  localStorage.getItem('workerThree');
-    document.getElementById('workerNameFour').innerHTML =  localStorage.getItem('workerFour');
+  //ADDICIONANDO AS INFORMAÇOES AOS RESPECTIVOS CARDS
 
-//PREENCHER DESC DOS CARDS DE SERVICO
+  //TIPOS DO SERVIÇOS
+  document.getElementById('serviceOne').innerHTML = localStorage.getItem('nomeCardUm'); 
+  document.getElementById('serviceTwoo').innerHTML =  localStorage.getItem('nomeCardDois');
+  document.getElementById('serviceThree').innerHTML =  localStorage.getItem('nomeCardTres');
+  document.getElementById('serviceFour').innerHTML =  localStorage.getItem('nomeCardQuatro');
 
-var serviceCardsDescription = ['Eletricista industrial, residencial e predial,mais de 25 anos de atendimento, montagens, instalações e manutenção NR10,eficiencia energética, orçamento sem compromisso.', 'Projetos de arquitetura, Arquitetura de interiores Projetos junto à vigilância sanitária Reformas residenciais e comerciais, Consultorias, Laudos, Maquetes 3D e Execução de obras', 'Encanador: registros, chuveiros, torneiras, válvulas de descarga, caixas aclopadas, desentupimento de pias, ralos, vasos, esgoto residencial. Ligue, trabalho a 25 anos com reparos hidráulicos.', 'Sou Designer de Interiores e faço consultorias, projetos de móveis e marcenaria, projetos de interiores comerciais e residências, e também reformas.'];
-//setando no localSTORAGE
-localStorage.setItem('descWorkCardOne', serviceCardsDescription[0]);
-localStorage.setItem('descWorkCardTwoo', serviceCardsDescription[1]);
-localStorage.setItem('descWorkCardThree', serviceCardsDescription[2]);
-localStorage.setItem('descWorkCardFour', serviceCardsDescription[3]);
+  //NOME DOS PRESTADORES
+  document.getElementById('workerNameOne').innerHTML = localStorage.getItem('servicoCardUm'); 
+  document.getElementById('workerNameTwoo').innerHTML =  localStorage.getItem('servicoCardDois');
+  document.getElementById('workerNameThree').innerHTML =  localStorage.getItem('servicoCardTres');
+  document.getElementById('workerNameFour').innerHTML =  localStorage.getItem('servicoCardQuatro');
+  
+  //DESC DOS SERVIÇOS
 
-document.getElementById('descCardOne').innerHTML = localStorage.getItem('descWorkCardOne');
-document.getElementById('descCardTwoo').innerHTML = localStorage.getItem('descWorkCardTwoo');
-document.getElementById('descCardThree').innerHTML = localStorage.getItem('descWorkCardThree');
-document.getElementById('descCardFour').innerHTML = localStorage.getItem('descWorkCardFour');
+  document.getElementById('descCardOne').innerHTML = localStorage.getItem('descCardUm'); 
+  document.getElementById('descCardTwoo').innerHTML =  localStorage.getItem('descCardDois');
+  document.getElementById('descCardThree').innerHTML =  localStorage.getItem('descCardTres');
+  document.getElementById('descCardFour').innerHTML =  localStorage.getItem('descCardQuatro');
+
+
 }
+
+
+
+
