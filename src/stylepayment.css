@@ -1,0 +1,73 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  #201F1F!important;
+}
+.navbar-dark{
+    background: orange;
+}
+
+img{
+    width: 150px;
+}
+.areaLogo{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav{
+    margin-bottom: 10px;
+}
+
+.navbar-toggler{
+    color: black;
+}
+
+nav  .navbar-toggler{
+    color: black;
+}
+
+.navbar-dark .navbar-toggler{
+    color: black;
+}
+
+.nav-item{
+    margin-right: 10px;
+    width: max-content;
+
+}
+ul .nav-item a{
+    text-decoration: none;
+    color:  black;
+}
+
+.navbar-nav{
+    gap: 60px;
+}
+svg{
+    width: 50px;
+    height: 50px;
+}
+.paymentBtnArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+}
+.paymentBtnArea button{
+    width: 160px;
+}
+
+
+@media screen and (max-width: 600px) {
+        .paymentBtnArea button{
+            width: 100px;
+        }
+}
