@@ -56,13 +56,13 @@ svg{
 .paymentBtnArea{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap!important   ;
     justify-content: space-evenly;
     margin-top: 50px;
 
 }
 .paymentBtnArea button{
-    width: 160px;
+    width: 260px;
 }
 
 #informationPaymentArea{
@@ -102,7 +102,9 @@ footer{
    background-color: black;
    
 }
-
+.brFormatForFooterAdjust{
+    height: 100%;
+}
 @media screen and (max-width: 600px) {
         .paymentBtnArea button{
             width: 100px;
@@ -113,4 +115,8 @@ footer{
         footer{
             font-size: 0.6em !important;
         }
-}
+        .brFormatForFooterAdjust{
+            height: 30%;
+        }
+
+    }

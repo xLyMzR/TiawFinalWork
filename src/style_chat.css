@@ -1,0 +1,176 @@
+/* PAGINA GERAL */
+html,head,body{
+    background-color: dimgrey !important;
+    
+}
+/* HEADER*/
+#logo{
+    width: 150px;
+}
+.header{
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    
+}
+/* MENU */
+.navbar-dark{
+    background: orange;
+    margin-bottom:20px;
+
+}
+
+nav{
+    margin-bottom: 10px;
+}
+
+.navbar-toggler{
+    color: black;
+}
+
+nav  .navbar-toggler{
+    color: black;
+}
+
+.navbar-dark .navbar-toggler{
+    color: black;
+}
+
+.nav-item{
+    margin-right: 10px;
+    width: max-content;
+
+}
+ul .nav-item a{
+    text-decoration: none;
+    color:  black;
+}
+
+.navbar-nav{
+    gap: 60px;
+}
+.svg_menu{
+    width: 50px;
+    height: 50px;
+}
+
+/* MAIN */
+.main{
+    background-color: orange;
+    border: solid;
+    margin-top: 10%;
+    width: 800px;
+    height: 900px;
+} 
+.titulo_chat {
+    border-bottom: solid;
+    padding: 10px;
+}
+.titulo_chat > h1 {
+    text-align: center;   
+}
+/* COLUNA MOBILE */
+
+.mobile{
+    display: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+    
+}
+@media screen and (max-width: 767px) {
+    .icones{
+        display: none;
+    }
+    .mobile{
+        display:flex;
+        border-bottom: solid;
+        justify-content: space-around;
+        
+    }
+    .mobile a{
+        color: black;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .footer{
+        font-size: 0.6em;
+    }
+    #logo{
+        width: 100px;
+    }
+    
+}
+
+/* COLUNA ESQUERDA */
+.icones  a{
+    display: block;
+    color: black;
+    margin: 10px;
+    margin-left: 0px;
+}
+.icones{
+    
+    border-right: solid;
+    overflow-y:  scroll;
+    height: 320px;
+    white-space: nowrap;
+}
+
+ /* COLUNA DIREITA */
+ .chat{
+    overflow-y:  scroll;
+    height: 700px;
+    justify-content: space-around;
+    
+ }
+.chat span{
+    margin-top:10px;
+    display: block!important;
+    margin-bottom: 10px;
+}
+.chat > p{
+    
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 5px;
+    
+}
+#m_recebida{
+    float: left;
+    
+}
+#m_enviada{
+    float: right;
+    
+}
+   /* INPUT MENSAGEM */
+.input_border{
+ border-right: solid;
+}
+.input{
+    
+
+}
+.input > input{
+    width:90%;
+    padding: 4px;
+    
+}
+.input > button{
+    margin-bottom: 5px;
+}
+/* FOOTER */
+.footer{
+    background-color: black;
+    color: white;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    margin-top: 120px;
+    padding: 10px;
+    
+}
+
+
