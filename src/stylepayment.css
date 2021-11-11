@@ -56,13 +56,18 @@ svg{
 .paymentBtnArea{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap!important   ;
+    flex-wrap: nowrap!important   ;
     justify-content: space-evenly;
     margin-top: 50px;
 
 }
 .paymentBtnArea button{
-    width: 260px;
+    width: 220px;
+    height: 80px;
+    background-color: yellow!important;
+    color: black;
+    font-size: 1.2em;
+    border: yellow;
 }
 
 #informationPaymentArea{
@@ -94,6 +99,7 @@ footer{
     height: max-content;
     width: 100%;
     justify-content: center;
+    font-size: 1.2em;
 }
 #rodape{
     color: white;
@@ -104,6 +110,16 @@ footer{
 }
 .brFormatForFooterAdjust{
     height: 100%;
+}
+#pageTitle{
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 2.0em;
+    margin-top: 50px;
+    background-color: rgba(255, 166, 0, 0.815);
 }
 @media screen and (max-width: 600px) {
         .paymentBtnArea button{
@@ -120,3 +136,26 @@ footer{
         }
 
     }
+
+    @media screen and (max-width: 800px) {
+        
+        img{
+            width: 100px;
+        }
+        #pageTitle{
+            font-size: 0.7em !important;
+            font-style: bolder  ;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        
+        .pageTitleWidth{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #pageTitle{
+            width: 70%;
+        }
+    }
+    

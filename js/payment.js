@@ -44,5 +44,36 @@ onload = () => {
     document.getElementById("addPaymentMethodBtn").innerHTML = "ADD ACCOUNT";
   };
 
+//CARREGANDO DIFERENTES TIPOS DE DADOS PARA ADD CONTAS E CARTOES
+  localStorage.setItem('paymentOptionCards', 'false' );
+  localStorage.setItem('paymentOptionPaypal', 'false' );
+  localStorage.setItem('paymentOptionPix', 'false' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ // document.getElementById("modalInfoOne").
+
 
 };

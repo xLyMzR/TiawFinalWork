@@ -58,7 +58,6 @@ ul .nav-item a{
 .main{
     background-color: orange;
     border: solid;
-    margin-top: 10%;
     width: 800px;
     height: 900px;
 } 
@@ -79,7 +78,10 @@ ul .nav-item a{
     
     
 }
-@media screen and (max-width: 767px) {
+ #caixaDeTextoChat{
+
+}
+@media screen and (max-width: 812px) {
     .icones{
         display: none;
     }
@@ -99,6 +101,9 @@ ul .nav-item a{
     }
     #logo{
         width: 100px;
+    }
+    #msgs{
+        display: none;
     }
     
 }
@@ -121,7 +126,7 @@ ul .nav-item a{
  /* COLUNA DIREITA */
  .chat{
     overflow-y:  scroll;
-    height: 700px;
+    margin-bottom: 500px;
     justify-content: space-around;
     
  }
