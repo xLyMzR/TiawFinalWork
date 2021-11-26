@@ -86,7 +86,7 @@ svg{
     color: white;
 }
 .topo a{
-    text-decoration: underline;
+    text-decoration: none!important;
     color: white
 }
 .card{
@@ -120,7 +120,12 @@ footer{
     color: white;
 justify-content: center;
 }
-
+#exitS{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
 @media screen and (max-width:500px) {
 
     footer{

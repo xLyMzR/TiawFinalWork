@@ -49,7 +49,7 @@ let campovazio = document.getElementById('campovazio');
         alert("usuario ou senha invalidos");
         return false;
     }
-       
+       localStorage.setItem("nameLogged", cadastroUsuario[0].nomeUsuario);
         window.location.href='./principal.html';
     
 }
