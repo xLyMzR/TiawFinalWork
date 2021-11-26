@@ -42,6 +42,7 @@ onload = () => {
     document.getElementById("addPaymentMethodArea").style.justifyContent =
       "center";
     document.getElementById("addPaymentMethodBtn").innerHTML = "ADD ACCOUNT";
+  
   };
 
 //CARREGANDO DIFERENTES TIPOS DE DADOS PARA ADD CONTAS E CARTOES

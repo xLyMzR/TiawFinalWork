@@ -1,5 +1,10 @@
 onload = () =>{
-//Verificação de campo vazio
+let emailLogin = document.getElementById('email');
+let senhaLogin = document.getElementById('senha');
+
+
+
+ //Verificação de campo vazio
 formularioLogin.onchange = ()=> {
 
 let campovazio = document.getElementById('campovazio');
@@ -20,16 +25,27 @@ let campovazio = document.getElementById('campovazio');
         campovazioSenha.style.fontSize = "0.7em";
     }
     else{campovazioSenha.innerHTML = ''}
+
+    
+   
 }
 
 //VERIFICAÇÃO DO USUARIO CADASTRADO PARA LOGIN
+
+
+
  butLog.onclick = ()=>{
-        
+    var cadastroUsuario =JSON.parse(localStorage.getItem(email.value));
+
+
+        let emailDigitado = document.getElementById("email");
+        let senhaDigitada = document.getElementById("senha");
+
         if(email.value == '' || senha.value == ''){
             return false;
             
         }
-    if(email.value !== localStorage.getItem('emailLogin') && senha.value !== localStorage.getItem('senha')){
+    if(emailDigitado.value !== cadastroUsuario[0].emailLogin && senhaDigitad.value !== cadastroUsuario[0].senha){
         alert("usuario ou senha invalidos");
         return false;
     }

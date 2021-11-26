@@ -222,13 +222,8 @@ senhaCadastro.onchange = ()=>{
   ]
 
   localStorage.setItem(emailCadastro.value, JSON.stringify(cadastroDoUsuario));
-  localStorage.setItem('emailLogin', emailCadastro.value);
-  localStorage.setItem('senha', senhaCadastro.value);
-  localStorage.setItem('nomeUsuario', nome.value);
-  localStorage.setItem('cpfUsuario', cpf.value);
-  localStorage.setItem('cepUsuario', cep.value);
-  localStorage.setItem('telefoneUsuario', celular.value);
-  
+
+
 alert("CADASTRO REALIZADO COM SUCESSO");
   
 window.location.href = "./login.html"; 

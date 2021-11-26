@@ -126,6 +126,9 @@ color:  #fab326d3;
     span{
         font-size: 1.2em;
     }
+    img{
+        width: 150px;
+    }
 }
 @media screen and (min-width: 1366px) {
 
