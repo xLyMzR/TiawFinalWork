@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Prestador de Serviços</title>
+    <link href="/src/styleRegisterWorker.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <header>
+        <div class="areaImg">
+          <img height="100" width="150" src="/logoReajuste.png" alt="logo">
+        </div>
+      </header>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Perfil de Usuário</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row">
+                            <div class="name">Nome Completo</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="full_name" placeholder="Nome completo">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">E-mail</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="email" name="email"
+                                        placeholder="exemplo@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Descrição de Serviço</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="message"
+                                        placeholder="Descreva aqui um resumo do seu trabalho"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Referência de Serviço</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <label class="label--file" for="file">Selecionar arquivo</label>
+                                    <span class="input-file__info">Sem arquivo selecionado</span>
+                                </div>
+                                <div class="label--desc">Anexe imagens de seus trabalhos anteriores.</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <footer>
+
+        Todos os direitos reservados - TIAW - <b>ICEI PUC MINAS</b>
+      </footer>
+
+</body>
+
+</html>
