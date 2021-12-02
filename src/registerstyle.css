@@ -8,6 +8,12 @@ body{
    background-image: url(/img/planodefundo.jpg);
 
 }
+a{
+    color: #fab326d3;;
+}
+a:hover{
+    color: white;
+}
 section{
     font-size: 1.5em;
     color: black;

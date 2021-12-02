@@ -1,78 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="página de cadastro" author="Leonardo Mamede" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styleRegisterWorker.css" />
+    <script type="text/javascript" src=""></script>
+    <title id="titulo">Cadastro prestador</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Prestador de Serviços</title>
-    <link href="/src/styleRegisterWorker.css" rel="stylesheet" media="all">
-</head>
-
-<body>
-    <header>
-        <div class="areaImg">
-          <img height="100" width="150" src="/logoReajuste.png" alt="logo">
+  <body>
+    <div class="tudo">
+      <header>
+          <a href="/sobre.html">
+        <div class="areaLogo">
+             <img alt="logo" src="img/logoteste.png" />
         </div>
+        </a>
       </header>
-    <div class="page-wrapper bg-dark p-t-100 p-b-50">
-        <div class="wrapper wrapper--w900">
-            <div class="card card-6">
-                <div class="card-heading">
-                    <h2 class="title">Perfil de Usuário</h2>
-                </div>
-                <div class="card-body">
-                    <form method="POST">
-                        <div class="form-row">
-                            <div class="name">Nome Completo</div>
-                            <div class="value">
-                                <input class="input--style-6" type="text" name="full_name" placeholder="Nome completo">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">E-mail</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email"
-                                        placeholder="exemplo@email.com">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Descrição de Serviço</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <textarea class="textarea--style-6" name="message"
-                                        placeholder="Descreva aqui um resumo do seu trabalho"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Referência de Serviço</div>
-                            <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
-                                    <label class="label--file" for="file">Selecionar arquivo</label>
-                                    <span class="input-file__info">Sem arquivo selecionado</span>
-                                </div>
-                                <div class="label--desc">Anexe imagens de seus trabalhos anteriores.</div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Salvar Alterações</button>
-                </div>
+      <main>
+        <section class="cadastro ">
+          <div class="titulocadastro">
+            <h1 class="text-center"><strong>Cadastre-se</strong></h1>
+          </div>
+          <div class="formulario ">
+          <form method="post" id="cadastroFormulario">
+            <!--CAMPO NOME-->
+              <span id="campoVazio"></span>
+            <div class="campodoform">
+            <label class="form-label" for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nomeData" class="form-control" autocomplete="none"/>
+          </div>
+            <!--CAMPO EMAIL-->
+            <span id="campoVazio"></span>
+            <div class="campodoform">
+            <label class="form-label" for="emailCadastro">E-mail</label>
+            <input type="email" id="emailCadastro" name="emailCadastroData" class="form-control" autocomplete="off"/>
+          </div>
+            <!--CAMPO CPF-->
+          <div class="campodoform">
+            <label class="form-label" for="cpf">CPF</label>
+            <input maxlength="11" type="number" id="cpf" name="cpfData" class="form-control" autocomplete="none" />
+            <span id="campoCPF"></span>  
+          </div>
+            <!--CAMPO CEP-->
+          
+            <div class="campodoform">
+            <label class="form-label" for="cep">CEP</label>
+            <input type="number" maxlength="8" id="cep" name="cepData" class="form-control" autocomplete="none" />
+            <span id="campoCep"></span> 
+          </div>
+            <!--CAMPO PHONE-->
+         
+            <div class="campodoform">
+            <label class="form-label" for="celular">Celular</label>
+            <input type="number" maxlength="12" id="celular" name="celular" class="form-control" placeholder="DDD+número" autocomplete="none"/>
+            <span id="campoCell"></span> 
+          </div>
+            <!--CAMPO SENHA-->
+            <span id="campoVazio"></span>
+            <div class="campodoform camposenha">
+            <label class="form-label" for="senha">Senha</label>
+            <span id="caractersSenha"></span>
+            <input type="password" id="senhaCadastro" name="senhaCadastroData" class="form-control" autocomplete="none"/>
             </div>
-        </div>
+            <!--CAMPO SENHA repeat-->
+            <span id="campoVazio"></span>
+            <div class="campodoform">
+            <label class="form-label" for="senhaRepeat">Repita sua senha</label>
+            <input type="password" id="senhaRepeat" name="senhaRepeatData" class="form-control" autocomplete="none" />
+            <span id="senhasIguais"></span>
+          </div>
+          <!--CAMPO DESC DE SERVIÇO-->
+
+          <div class="campodoform">
+            <label class="form-label" for="senhaRepeat">Entre com a descrição do seu serviço</label>
+            <input type="text" id="descWork" name="desc" class="form-control" autocomplete="none" />
+            
+          </div>
+          <!--CAMPO TIPO DE SERVIÇO-->
+          <label class="form-label" for="inputGroupSelect01">Escolha uma categoria de serviço</label>
+          <div class="input-group mb-3">
+          
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">Encanamento</option>
+              <option value="2">Elétrica</option>
+              <option value="3">Pintura</option>
+              <option value="4">Marcenaria</option>
+              <option value="5">Design</option>
+              <option value="6">Jardinagem</option> 
+            </select>
+          </div>
+
+
+            <div class="campoTermos">
+              <input class="form-check-input me-2" type="checkbox" value="" id="concordaComTermos" name="concordaComTermos"/>
+              <label class="form-check-label" for="concordaComTermos">
+                Concordo com todos os termos
+                <a href="#!">Termos de serviço</a>
+              </label>
+            </div>
+            <div class="btnSend">
+              <button id="butCad" type="button" class="btn btn-warning btn-lg">
+                Registrar
+              </button>
+            </div>
+          </form>
+          </div>
+        </section>
+      </main>
+
+      <!--fim da div "TUDO"-->
     </div>
 
-    <script src="js/global.js"></script>
     <footer>
-
-        Todos os direitos reservados - TIAW - <b>ICEI PUC MINAS</b>
-      </footer>
-
-</body>
-
+      <div class="rodape">
+        <p>Todos os direitos reservados @ 2021 - ICEI Puc Minas TIAW</p>
+      </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -1,0 +1,85 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(44, 44, 44);
+    color: white;
+}
+
+body {
+    background: rgb(44, 44, 44)
+}
+img{
+    width: 150px;
+}
+.areaImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0,5em;
+    background-color: black;
+}
+.form-control:focus {
+    box-shadow: darkorange;
+    border-color: darkorange;
+}
+
+.profile-button {
+    background: darkorange;
+    box-shadow: black;
+    border: none
+}
+
+.profile-button:hover {
+    background: orange
+}
+
+.profile-button:focus {
+    background: darkorange;
+    box-shadow: darkorange
+}
+
+.profile-button:active {
+    background: darkorange;
+    box-shadow: darkorange
+}
+
+.back:hover {
+    color: darkorange;
+    cursor: pointer
+}
+
+input,
+  textarea {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: darkorange;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px black
+}
+
+footer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
