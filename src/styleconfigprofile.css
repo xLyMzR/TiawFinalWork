@@ -58,3 +58,40 @@ img{
     cursor: pointer;
     border: solid 1px #BA68C8
 }
+.navbar-dark{
+    background: orange;
+}
+
+nav{
+    margin-bottom: 10px;
+}
+
+.navbar-toggler{
+    color: black;
+}
+
+nav  .navbar-toggler{
+    color: black;
+}
+
+.navbar-dark .navbar-toggler{
+    color: black;
+}
+
+.nav-item{
+    margin-right: 10px;
+    width: max-content;
+
+}
+ul .nav-item a{
+    text-decoration: none;
+    color:  black;
+}
+
+.navbar-nav{
+    gap: 60px;
+}
+svg{
+    width: 50px;
+    height: 50px;
+}
