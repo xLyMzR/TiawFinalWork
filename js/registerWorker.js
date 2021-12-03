@@ -15,6 +15,7 @@ onload = () =>{
     
     });
     
+    let quantidadeDeUsuarios;
     
     //VERIFICAÇÃO EM TEMPO REAL
     
@@ -205,7 +206,7 @@ onload = () =>{
         
       if(senhaCadastro.value.length< 8 || cpf.value.length <11 || cpf.value.length >11 || cep.value.length >8 || celular.value.length >12){
           alert('Verifique os campos do formulário');
-    
+          
          return false;
        }
     
@@ -223,13 +224,17 @@ onload = () =>{
       }
       ]
     
-      localStorage.setItem(emailCadastro.value, JSON.stringify(cadastroDoPrestador));
+    
     
     
     alert("CADASTRO REALIZADO COM SUCESSO");
-      
-    console.log(inputGroupSelect01.value)
+    
+    localStorage.setItem(quantidadeDeUsuarios, JSON.stringify(cadastroDoPrestador));
+    
     window.location.href = "./login.html"; 
+    quantidadeDeUsuarios++;
+
+
     
     //fim do onclick
       }

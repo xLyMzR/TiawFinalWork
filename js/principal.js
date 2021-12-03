@@ -50,19 +50,22 @@ onload = () =>{
   localStorage.setItem('descCardTres', cardThree.serviceDesc);
   localStorage.setItem('descCardQuatro', cardFour.serviceDesc);
 
+let qntCARDs;
 
+  var cadastroDoPrestador = JSON.parse(localStorage.getItem(qntCARDs));
+  qntCARDs++;
   //ADDICIONANDO AS INFORMAÇOES AOS RESPECTIVOS CARDS
 
   //TIPOS DO SERVIÇOS
-  document.getElementById('serviceOne').innerHTML = localStorage.getItem('nomeCardUm'); 
-  document.getElementById('serviceTwoo').innerHTML =  localStorage.getItem('nomeCardDois');
+  document.getElementById('serviceOne').innerHTML = cadastroDoPrestador[0].categoriaTrabalho; 
+  document.getElementById('serviceTwoo').innerHTML =  cadastroDoPrestador[0].categoriaTrabalho;
   document.getElementById('serviceThree').innerHTML =  localStorage.getItem('nomeCardTres');
   document.getElementById('serviceFour').innerHTML =  localStorage.getItem('nomeCardQuatro');
 
   //NOME DOS PRESTADORES
-  document.getElementById('workerNameOne').innerHTML = localStorage.getItem('servicoCardUm'); 
-  document.getElementById('workerNameTwoo').innerHTML =  localStorage.getItem('servicoCardDois');
-  document.getElementById('workerNameThree').innerHTML =  localStorage.getItem('servicoCardTres');
+  document.getElementById('workerNameOne').innerHTML = cadastroDoPrestador[0].nomeUsuario; 
+  document.getElementById('workerNameTwoo').innerHTML =  cadastroDoPrestador[0].nomeUsuario;
+  document.getElementById('workerNameThree').innerHTML =  cadastroDoPrestador[0].nomeUsuario;
   document.getElementById('workerNameFour').innerHTML =  localStorage.getItem('servicoCardQuatro');
   
   //DESC DOS SERVIÇOS

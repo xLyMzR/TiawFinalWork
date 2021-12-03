@@ -50,6 +50,7 @@ let campovazio = document.getElementById('campovazio');
         return false;
     }
        localStorage.setItem("nameLogged", cadastroUsuario[0].nomeUsuario);
+       localStorage.setItem("userLogged", JSON.stringify(cadastroUsuario));
         window.location.href='./principal.html';
     
 }
