@@ -1,59 +1,105 @@
 onload = ()=>{
 
-    const botaoAlterarPerfil = document.getElementById('atualizarPerfil');
-    const nomeUsuario = document.getElementById('nomeCompleto');
-    const cepUsuario = document.getElementById('cep');
-    const cellUsuario = document.getElementById('celular');
-    const senhaUsuario = document.getElementById('senha');
-    const cpfUsuario= document.getElementById('cpf');
-    const emailUsuario = document.getElementById('email');
-    var dataUserLogged = JSON.parse(localStorage.getItem("userLogged"));
-    const emailSideBar = document.getElementById('emailLogado');
-    const confirmSenha = document.getElementById('confirmSenhar');
+  
 
-    nomeUsuario.placeholder = `${dataUserLogged[0].nomeUsuario}`;
-    cepUsuario.placeholder = `${dataUserLogged[0].cepUsuario}`;
-    cellUsuario.placeholder = `${dataUserLogged[0].telefoneUsuario}`;
-    senhaUsuario.placeholder = `**********`;
-    document.getElementById('confirmSenha').placeholder = '**********';
-    cpfUsuario.placeholder =`${dataUserLogged[0].cepUsuario}`;
-    emailUsuario.placeholder =`${dataUserLogged[0].emailLogin}`;
-    emailSideBar.innerHTML =`${dataUserLogged[0].emailLogin}`;
+      const campos = document.getElementById('campos');
+      let userLogged = JSON.parse(localStorage.getItem("userLogged"));
+
+      campos.innerHTML= `<div class="p-3 py-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Configurações de Perfil</h4>
+      </div>
+      <div class="row mt-2">
+          <div class="col-md-12"><label class="labels">Nome</label><input id="nomeCompleto" type="text" class="form-control" placeholder="" value="${userLogged[0].nomeUsuario}"></div>
+          <div class="col-md-12"><label class="labels">Email</label><input  id="email" type="text" class="form-control" placeholder="enter email id" value="${userLogged[0].emailLogin}"></div>
+          <div class="col-md-12"><label class="labels">Cpf</label><input type="text" id="cpf" class="form-control" placeholder="" value="${userLogged[0].cpfUsuario}"></div>
+          <div class="col-md-12"><label class="labels">Celular</label><input  id="celular" type="number" class="form-control" placeholder="enter phone number" value="${userLogged[0].telefoneUsuario}"></div>
+      </div>
+      <div class="row mt-3">
+          
+          <div class="col-md-12"><label class="labels">Cep</label><input id="cep" type="number" class="form-control" placeholder="enter address line 2" value="${userLogged[0].cepUsuario}"></div>
+
+          
+      </div>
+      <div class="row mt-3">
+          <div class="col-md-6"><label class="labels">Senha</label><input id="senha" type="password" class="form-control" placeholder="senha" value="">
+          <span id="aviso"></span>
+          </div>
+          <div class="col-md-6"><label class="labels">Confirme sua senha</label><input id="confirmSenha" type="password" class="form-control">
+          <span id="avisoConfirm"></span>
+          </div>
+      </div>
+      <div class="mt-5 text-center"><button id="atualizarPerfil" class="btn btn-primary profile-button" type="button">Atualizar</button></div>
+  </div>`;
+
+
+  const botaoAlterarPerfil = document.getElementById('atualizarPerfil');
+  
+  
+//aviso de senha com 8 caracters
+  document.getElementById('senha').onblur = () => {
+
+    if(document.getElementById('senha').value.length <8 ){
+
+      document.getElementById('aviso').innerHTML = "senha deve conter no míninmo 8 caracteres";
+      document.getElementById('aviso').style.fontSize = "0.7em";
+      document.getElementById('aviso').style.color = "orange";
+      document.getElementById('aviso').style.fontWeight = "bolder";
+    }
+
+  }
+
+  document.getElementById('confirmSenha').onblur = ()=> {
+
+    if(document.getElementById('senha').value != document.getElementById('confirmSenha').value){
+
+    document.getElementById('avisoConfirm').innerHTML = "as senhas devem ser iguais";
+    document.getElementById('avisoConfirm').style.fontSize = "0.7em";
+    document.getElementById('avisoConfirm').style.color = "orange";
+    document.getElementById('avisoConfirm').style.fontWeight = "bolder";
+    }
+    else{
+      document.getElementById('avisoConfirm').innerHTML='';
+    }
+
+  }
+
 
 
 //CONDIÇÕES PARA ALTERAÇÃO DE PERFIL
     botaoAlterarPerfil.onclick = () =>{
 
-  
-        if(cepUsuario.value.length< 8 || nomeUsuario.value=='' || emailUsuario.value =='' || cpfUsuario.value=='' || cepUsuario.value == '' || cellUsuario.value =='' || senhaUsuario.value == '' || confirmSenha.value == '' || senhaUsuario.value !== confirmSenha.value){
-           alert('Verifique os campos do formulário ');
-           return false;
-         }
-         
-       if(senhaUsuario.value.length< 8 || cpfUsuario.value.length <11 || cpfUsuario.value.length >11 || cepUsuario.value.length >8 || cellUsuario.value.length >12){
-           alert('Verifique os campos do formulário');
      
-          return false;
+
+     if(document.getElementById('senha').value == '' || document.getElementById('nomeCompleto').value == '' || document.getElementById('email').value=='' || document.getElementById('cpf').value == '' || document.getElementById('cep').value == '' || document.getElementById('celular').value == '' || document.getElementById('senha').value.length < 8 || document.getElementById('confirmSenha').value != document.getElementById('senha').value){
+        
+      alert(" Por gentileza verifique se todos os campos estão preenchidos!");
+
+      return false;
+      
+     }
+
+
+     //criando o objeto cadastroUsuario para usar na página de login  
+     
+          let cadastroDoUsuario = [{
+          "nomeUsuario": document.getElementById('nomeCompleto').value,
+          "emailLogin": document.getElementById('email').value,
+          "senha": document.getElementById('senha').value,
+          "cpfUsuario":  document.getElementById('cpf').value,
+          "cepUsuario": document.getElementById('cep').value,
+          "telefoneUsuario": document.getElementById('celular').value
         }
-     
-     //criando o objeto cadastroUsuario para usar na página de login
-     
-        let cadastroDoUsuario = [{
-         "nomeUsuario": document.getElementById('nome').value,
-         "emailLogin": document.getElementById('emailCadastro').value,
-         "senha": document.getElementById('senhaCadastro').value,
-         "cpfUsuario": document.getElementById('cpf').value,
-         "cepUsuario": document.getElementById('cep').value,
-         "telefoneUsuario": document.getElementById('celular').value
-       }
-       ]
+        ]
+
+        localStorage.setItem("userLogged", JSON.stringify(cadastroDoUsuario));
+        localStorage.setItem("nameLogged", cadastroDoUsuario[0].nomeUsuario)
+        localStorage.setItem(cadastroDoUsuario[0].emailLogin, JSON.stringify(cadastroDoUsuario));
+      
+      
+      alert("ALTERAÇÃO REALIZADA COM SUCESSO");
        
-       localStorage.setItem(emailUsuario.value, JSON.stringify(cadastroDoUsuario));
-     
-     
-     alert("ALTERAÇÃO REALIZADA COM SUCESSO");
-       
-     window.location.href = "./configProfileUser.html"; 
+    
      
      //fim do onclick
        }
