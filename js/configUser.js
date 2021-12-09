@@ -48,7 +48,6 @@ onload = ()=>{
        }
        ]
        
-       localStorage.removeItem(dataUserLogged[0].emailLogin);
        localStorage.setItem(emailUsuario.value, JSON.stringify(cadastroDoUsuario));
      
      
