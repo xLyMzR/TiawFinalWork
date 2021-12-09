@@ -4,6 +4,11 @@ onload = ()=>{
 
       const campos = document.getElementById('campos');
       let userLogged = JSON.parse(localStorage.getItem("userLogged"));
+      const emailLogado = document.getElementById("emailLogado");
+
+      //carrega o email do usuario ao lado do avatar
+      emailLogado.innerHTML = `${userLogged[0].emailLogin}`;
+  
 
       campos.innerHTML= `<div class="p-3 py-5">
       <div class="d-flex justify-content-between align-items-center mb-3">
@@ -92,9 +97,14 @@ onload = ()=>{
         }
         ]
 
+        //remove o cadastro
+        localStorage.removeItem(userLogged[0].emailLogin);
+        //substitui os dados do usuario logado
         localStorage.setItem("userLogged", JSON.stringify(cadastroDoUsuario));
         localStorage.setItem("nameLogged", cadastroDoUsuario[0].nomeUsuario)
-        localStorage.setItem(cadastroDoUsuario[0].emailLogin, JSON.stringify(cadastroDoUsuario));
+       //seta o novo cadastro
+        localStorage.setItem(`${document.getElementById('email').value}`, JSON.stringify(cadastroDoUsuario));
+        
       
       
       alert("ALTERAÇÃO REALIZADA COM SUCESSO");
