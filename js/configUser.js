@@ -51,6 +51,9 @@ onload = ()=>{
       document.getElementById('aviso').style.color = "orange";
       document.getElementById('aviso').style.fontWeight = "bolder";
     }
+    else{
+      document.getElementById('aviso').innerHTML='';
+    }
 
   }
 
