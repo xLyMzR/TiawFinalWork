@@ -194,10 +194,14 @@ onload = () =>{
           document.getElementById('butCad').disabled = true;
         }
       }
-    
+      //vetor para alocação dos objetos de cadastro
+
+      var prestadores = [];
+
+  
      //verificação de envio 
       butCad.onclick = () =>{
-    
+  
       
        if(cep.value.length< 8 || nome.value=='' || emailCadastro.value =='' || cpf.value=='' || cep.value == '' || celular.value =='' || senhaCadastro.value == '' || senhaRepeat.value == '' || senhaCadastro.value !== senhaRepeat.value){
           alert('Verifique os campos do formulário ');
@@ -223,16 +227,21 @@ onload = () =>{
         "categoriaTrabalho": document.getElementById('inputGroupSelect01').value
       }
       ]
+
+      prestadores.push(cadastroDoPrestador);
+      
+     
     
+      localStorage.setItem("prestadores", JSON.stringify(prestadores));
+
     
-    
+
     
     alert("CADASTRO REALIZADO COM SUCESSO");
     
-    localStorage.setItem(quantidadeDeUsuarios, JSON.stringify(cadastroDoPrestador));
     
     window.location.href = "./login.html"; 
-    quantidadeDeUsuarios++;
+ 
 
 
     
